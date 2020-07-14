@@ -1,21 +1,14 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom"
-  import Header from './components/Header'
-  import Nav from './components/Nav'
-  import Portfolio from './components/Portfolio'
-  import About from './components/About'
-  import Blog from './components/Blog'
-  import Contact from './components/Contact'
-  import Footer from './components/Footer'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+  import Header from './components/layout/Header'
+  import Nav from './components/layout/Nav'
+  import { Portfolio, About, Blog, Contact } from './components'
+  import Footer from './components/layout/Footer'
+  import './Main.css'
 
   const Main = () => {
     return (
-        <>
+        <div className='site'>
             <Header />
             <Router>
                 <Nav />
@@ -23,20 +16,19 @@ import {
                     <Route path="/portfolio">
                         <Portfolio />
                     </Route>
-                        <Route path="/about">
-                    <About />
+                    <Route path="/about">
+                        <About />
                     </Route>
-                        <Route path="/blog">
-                    <Blog />
+                    <Route path="/blog">
+                        <Blog />
                     </Route>
-                        <Route path="/contact">
-                    <Contact />
+                    <Route path="/contact">
+                        <Contact />
                     </Route>
                 </Switch>
             </Router>
-
             <Footer />
-        </>
+        </div>
     );
 }
 

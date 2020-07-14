@@ -4,14 +4,14 @@ import {
     Switch,
     Route
   } from "react-router-dom"
-  import Home from './components/Home'
+  import Home from './components/pages/Home'
   import Main from './Main'
 
 const App = () => {
     return (
         <Router>
           <Switch>
-            <Route path="/portfolio">
+            <Route path={['/portfolio', '/about', '/blog', '/contact']} >
               <Main />
             </Route>
             <Route exact path="/">

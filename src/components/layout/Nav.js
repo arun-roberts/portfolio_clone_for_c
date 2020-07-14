@@ -1,13 +1,9 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Nav = () => {
     return (
         <>
-            <h1>The Nav</h1>
             <nav>
                 <ul>
                     <li>
