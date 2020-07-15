@@ -12,7 +12,7 @@
     padding: 4.7rem 4.7rem;
 }
 
-h1, h2, ul {
+.main-header, .main-subheader, .main-nav__list {
     text-transform: uppercase;
     text-align: center;
 }
@@ -21,20 +21,20 @@ h1, h2, ul {
                         HEADER
 ======================================================== */
 
-h1 {
+.main-header {
     font-size: 1.6rem;
     letter-spacing: 0.7rem;
     margin-bottom: 0.9rem;
 }
 
-h2 {
+.main-subheader {
     font-size: 0.8rem;
     letter-spacing: 0.4rem;
     color: rgb(161, 161, 161);
     margin-bottom: 3.9rem;
 }
 
-ul {
+.main-nav__list {
     margin: 2.2rem 0;
 }
 
@@ -47,7 +47,7 @@ li {
     margin: 0 0.7rem;
 }
 
-a {
+.main-nav__link, .main-link {
     text-decoration: none;
     color: black;
 }
@@ -56,7 +56,7 @@ a {
     color: rgb(161, 161, 161);
 }
 
-a:hover {
+.main-nav__link:hover, .main-link:hover {
     color: rgb(161, 161, 161);
 }
 

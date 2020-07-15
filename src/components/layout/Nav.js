@@ -4,19 +4,19 @@ import { Link } from "react-router-dom"
 const Nav = () => {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/portfolio">Portfolio</Link>
+            <nav className='main-nav'>
+                <ul className='main-nav__list'>
+                    <li className='main-nav__item'>
+                        <Link className="main-nav__link" to="/portfolio">Portfolio</Link>
                     </li>
-                    <li>
-                        <Link to="/about">About</Link>
+                    <li className='main-nav__item'>
+                        <Link className="main-nav__link" to="/about">About</Link>
                     </li>
-                    <li>
-                        <Link to="/blog">Blog</Link>
+                    <li className='main-nav__item'>
+                        <Link className="main-nav__link" to="/blog">Blog</Link>
                     </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
+                    <li className='main-nav__item'>
+                        <Link className="main-nav__link" to="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>

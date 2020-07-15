@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <>
-            <Link to="/"><h1>Celia Dowzer</h1></Link>
-            <h2>Creative Stylist</h2>
+            <Link className="main-link" to="/">
+                <h2 className='main-header'>Celia Dowzer</h2>
+            </Link>
+            <h3 className='main-subheader'>Creative Stylist</h3>
 
         </>
     )

@@ -1,0 +1,128 @@
+body {
+    background-color: #000;
+}
+
+.home-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    font-family: 'Lato', sans-serif;
+}
+
+.home-container__content {
+    position: absolute;
+    top: 38%;
+    right: 12%;
+}
+
+#home-header {
+    font-size: 4.3rem;
+    font-weight: 300;
+    margin-bottom: 0.35rem;
+}
+
+.home-subheader {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 3rem;
+}
+
+.home-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    color: white;
+    border: 0.1rem solid white;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 250, 0.3);
+
+}
+
+.slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+    margin: 0;
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: url(https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://images.pexels.com/photos/2023364/pexels-photo-2023364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://images.pexels.com/photos/3780469/pexels-photo-3780469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    animation-delay: 40s; 
+  }
+
+@keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
