@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { XMasonry, XBlock } from 'react-xmasonry'
+import Gallery from './Gallery'
 
 const imgs = [
     {
@@ -50,16 +52,30 @@ const Portfolio = () => {
     const [ images, addImage ] = useState(imgs)
 
     return (
-        <div className='grid'>
-            <XMasonry>{ images.map((image, id) => (
-                <XBlock key={ id === 0 ? 'persistent' : id }>
-                    <div className="grid-item">
-                        <img src={image.url} />
-                    </div> 
-                </XBlock>
-            ))}
-            </XMasonry>
-        </div>
+        <>
+        <Router>
+            <div className='grid'>
+                <XMasonry>{ images.map((image, id) => (
+                    <XBlock key={ id === 0 ? 'persistent' : id }>
+                        <div className="grid-item">
+                            <Link to={'/portfolio/:' + id}>
+                                <img src={image.url} />
+                            </Link>
+                        </div> 
+                    </XBlock>
+                ))}
+                </XMasonry>
+                
+                <Switch>{ images.map((image, id) =>(
+                    <Route key={id} path={"/portfolio/:" + id}>
+                        <Gallery key={id} image={image} />
+                    </Route>
+                ))}
+                </Switch>
+                
+            </div>
+        </Router>
+        </>
     )
 }
 
