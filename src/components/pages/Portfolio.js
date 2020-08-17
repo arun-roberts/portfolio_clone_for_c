@@ -1,36 +1,44 @@
-import React, { useState, useContext, useEffect } from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory,
-    useLocation,
-    useParams
-  } from "react-router-dom"
+import React, { useContext } from 'react'
 import { XMasonry, XBlock } from 'react-xmasonry'
+import ImageContainer from './ImageContainer'
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component'
 import ImageContext from '../../context/ImageContext'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+require('isomorphic-fetch'); // or another library of choice.
+var Dropbox = require('dropbox').Dropbox;
+var dbx = new Dropbox({ accessToken: '' });
+dbx.filesListFolder({path: ''})
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
 
-const Portfolio = () => {
+const Portfolio = ({ scrollPosition }) => {
     const { images } = useContext(ImageContext)
-    let location = useLocation()
-    
 
     return (
         <>
             <div className='grid'>
-                <XMasonry>{ images.map((image) => (
+                <XMasonry targetBlockWidth={400}>{ images.map((image) => (
                     <XBlock key={ image.id === 0 ? 'persistent' : image.id }>
                         <div className="grid-item">
-                            <Link
-                                key={image.id} 
-                                to={{
-                                    pathname: `/portfolio/${image.id}`,
-                                    state: { background: location }
-                                }}
-                            >
-                                <img src={image.url} />
-                            </Link>
+                            {/* <LazyLoadImage 
+                                effect="opacity" 
+                                scrollPosition={scrollPosition} 
+                                src={image.url} 
+                                alt={image.description}
+                            /> */}
+                            <ImageContainer
+                                src={image.url}
+                                alt={image.description}
+                            />
+                            {/* <img
+                                loading="lazy"
+                                src={image.url}
+                                alt={image.description}
+                            /> */}
                         </div> 
                     </XBlock>
                 ))}
@@ -40,4 +48,4 @@ const Portfolio = () => {
     )
 }
 
-export default Portfolio
+export default trackWindowScroll(Portfolio)

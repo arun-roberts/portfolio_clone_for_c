@@ -1,10 +1,11 @@
 import React from 'react'
+import portrait from '../images/celia.jpg'
 
 const About = () => {
     return (
         <div className="about-section">
-            <figure>
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FrestinpiecesTM%2Fphotos%2Fa.1695785567132471%2F1695839070460454%2F%3Ftype%3D3&width=500"  frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <figure className="about-section__figure">
+                <img className="about-section__image" src={portrait} alt="Celia Dowzer" />
             </figure>
             <p className="about-section__text">
                 Cupcake ipsum dolor sit amet ice cream lollipop jelly-o chocolate bar. Donut ice cream caramels I love macaroon cheesecake jelly-o. Macaroon gummies I love.

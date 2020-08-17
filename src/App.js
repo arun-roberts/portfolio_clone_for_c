@@ -8,7 +8,7 @@ const App = () => {
     return (
         <Router>
           <Switch>
-            <Route path={['/portfolio', '/about', '/blog', '/contact']} >
+            <Route path={['/portfolio', '/about', '/contact']} >
                 <Main />
             </Route>
             <Route exact path="/">

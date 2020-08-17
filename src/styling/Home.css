@@ -67,7 +67,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(250, 250, 250, 0.3);
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
 
 }
 
@@ -82,28 +82,28 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite; 
+    animation: imageAnimation 40s linear infinite; 
     margin: 0;
 }
 
 .slideshow li:nth-child(1) { 
-    background-image: url(https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) 
+    background-image: url(https://previews.dropbox.com/p/thumb/AA5j_qngl6iC7k85QJW9wqFVX-BJju0iJhPyz7FAEDSj7rZeL5XQnml--MMEkTm9Tjg7y3OTotBj6_hNzB9XEB-CJP5b_Ff8MUYPcE9dQvhyQvQZxqFU5H5qg-BeTt8TIbk75PRLCXysxSU1FqTvCR_ZZfjeFzsChliWXjqERZB_zE83VrQoW4anwYSlGSfu8OMEPOGyd1AoPLQOKTt-adYWNP__osPGv2VG6sji_q6l_cK85xdtpIJT5YGi9hIOEAbb5g4q81n6jFUDVntUi4LqvefbdIQf70Ru5G8J4vP3N7AOMPIF-93x0exIwCLX0OqTJ6JgxSTLaW-IEwPfd4_pODQvL8EZc8r2ZNCzldqgzozvGjNWYMvogsujB6FUrtB7jcEKwVI9KjDGTKvOD258KIVMK3G7qezWzmT7aQH1Iw/p.jpeg?fv_content=true&size_mode=5) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(https://images.pexels.com/photos/2023364/pexels-photo-2023364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    animation-delay: 10s; 
+    background-image: url(https://previews.dropbox.com/p/thumb/AA7ypIGI0STsBPaiv8mb5grqaBBUH8UEVcOoFjJSZG4BKuCRkrMQjhbU_d3QONKOQjVgNdySYN-gU8lbuqRcSgCdMp3BEh47eMwK9fNBAKV8BX6kXaZJhzZPbpJAQoxjsL9IOeHk8iJ3dQZhosb5_nnBDk6jZ4MFefgmis8IV3y-utgYyuCZnSBLTQzBNKp-ngtrYmiAqS2FQyi8QD-E-l4g7TKYwdzh0-F_anAFpayncJwLKTHslBQqiqbvGUf9w2GfEYKtQEZ9VtfWsrJdgRE4L-XV7KkvqrW7-h0vSBI-I1cpueLZPHM9zaxYSyBjOkSz1zs-8dsMDx-91YX5tVM6S1u_qD2WJHRTeeCdm0iTcKEzZ0tQ2eZOl4ynPoiOEyaG9aRVrFhvPrfVt7e4ToopAe3MdnBL8r-J605rloD6GA/p.jpeg?size=1600x1200&size_mode=3);
+    animation-delay: 8s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(https://images.pexels.com/photos/3780469/pexels-photo-3780469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    animation-delay: 20s; 
+    background-image: url(https://previews.dropbox.com/p/thumb/AA48yClE3028MO_09tXh-Oj0NprmvGbcELXWTDZa51MqHjdVTLAYcA7Fi4AZ-QU758w-ih0gKWnXR14yBzzjyr3ehZ24GOXsyykXLr4MW4BJjT_yviVQ5dqJZR9QW0pG9_5aOaF3D_BTQ0oiZqG6SSYHHeK3L--6lC3ncNV_-7v9zhhqY2FlyqXNYfpLdNMZlpsQzte2vxoc0I3oGx33yInUZq-02tJFjJXqx_J73WUVWojedJj2SZ62_P0Sdu0GRzXgR7hWokkPZfapdUG3F-Y3cUnckgP2oi-xsC83U24OcKacwNOFIFFM-M5dSY2x8Dg4eY__N2zLeHLRUvq4RZCrcGj8BJuXsaY812i0i2hq5Q/p.jpeg?size=1600x1200&size_mode=3);
+    animation-delay: 16s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    animation-delay: 30s; 
+    background-image: url(https://previews.dropbox.com/p/thumb/AA7a3fauLVBUzSmmDlHGPibdPFQCdR8GC_NpQZtMoIJ59T64qvfA1yMmTm8CZ4K-Uim8EnkIbzu2UNWDRs5tdpuVI0a-EJzakKZ3BO_h3J4CPVQLcXY9M49MXBktd_s7zHpqXqKPRXs4XpXVupSJtqgsiCQDwKBhxreEORcsIqs2OnPEZiMP5sWKWMQa3wyQolpT867M6VXdqQeS7JuZSKHD7hdT6fDp38NMPjRcJfv06CAzQ5sd3ogVyhO6e4vrhXJWhhaQfASPb4J_x9zXRcnYgZxzguBEEsBgx_Fdas05uYOo1xt-fU3ePEFeirM_sKHwSwOJixakhRqDh2qgZNnBWiqkvQF_bSzehBCngwSEXg/p.jpeg?size=1600x1200&size_mode=3);
+    animation-delay: 24s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    animation-delay: 40s; 
+    background-image: url(https://previews.dropbox.com/p/thumb/AA6I9ps7r754lQH-vrWSkoWw42d3dqBB01wbEuijDULMJSmcjy9bamcQpnFyEX-kK6bCYHjawkrYykKjf1guY7uk164i1P3ytAU-MRfXtZOsHkkPxHZFKzrlGYcZ7a5uNDdUPB62SKSqEmnCHef6raTBubu--6VSXNUrtu21u5A096P-72xHEY7glTLZgFaIhQsXtoIVds1s87QuXurC8EHU4mDpv48BgVuZBM8yRr9HJHPMSLAtntTYuO2vApdyHJhMvf0Yfdhat5OUHG3QH6unSCG22nzFaw49mBvqVJH5fek-32t-rGOGK5ojnB42Bg6YoJVEzuo9N13AJth8aRyV6kIAE4W3cxWHfd1ZzWpkEbFlcAvtTdHPclFhujReiO5UYZeBtGGoRch5s5N5KjtWxK29QcsBBzaCP7_fPHSaeQ/p.jpeg?size=1600x1200&size_mode=3);
+    animation-delay: 32s; 
   }
 
 @keyframes imageAnimation { 
