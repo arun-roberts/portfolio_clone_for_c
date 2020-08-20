@@ -3,7 +3,7 @@ import portrait from '../images/celia.jpg'
 
 const About = () => {
     return (
-        <div className="about-section">
+        <div className="about-section absolute">
             <figure className="about-section__figure">
                 <img className="about-section__image" src={portrait} alt="Celia Dowzer" />
             </figure>
@@ -19,6 +19,7 @@ const About = () => {
                 <br/>
                 Fruitcake dessert I love tiramisu pie. Pie cookie soufflé. Marzipan bonbon I love lemon drops dragée cotton candy croissant I love. Jujubes brownie muffin oat cake sweet dessert candy dessert tart.
             </p>
+            <div className="ghostDiv"></div>
         </div>
     )
 }

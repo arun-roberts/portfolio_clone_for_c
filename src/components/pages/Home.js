@@ -4,7 +4,7 @@ import '../../styling/Home.css'
 
 const Home = () => {
     return (
-        <>
+        <div className="home" >
             <main className='home-container'>
                 <div className='home-container__content'>
                     <h1 id="home-header">Celia Dowzer</h1>
@@ -21,7 +21,7 @@ const Home = () => {
                 <li></li>
                 <li></li>
             </ul>
-        </>
+        </div>
     )
 }
 

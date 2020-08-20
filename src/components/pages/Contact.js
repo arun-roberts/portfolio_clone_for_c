@@ -111,6 +111,7 @@ const Contact = () => {
                     </li>
                 </ul>
             </div>
+            <div className="ghostDiv"></div>
         </div>
     )
 }
