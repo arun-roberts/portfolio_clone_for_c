@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 
-const Nav = () => {
+const Nav = ({ fillGhosts }) => {
     return (
         <>
             <nav className='main-nav'>
@@ -10,7 +10,18 @@ const Nav = () => {
                         <NavLink 
                             activeClassName="main-nav__link--active" 
                             className="main-nav__link" 
+                            to="/about"
+                            onClick={fillGhosts}
+                        >
+                            About
+                        </NavLink>
+                    </li>
+                    <li className='main-nav__item'>
+                        <NavLink 
+                            activeClassName="main-nav__link--active" 
+                            className="main-nav__link" 
                             to="/portfolio"
+                            onClick={fillGhosts}
                         >
                             Portfolio
                         </NavLink>
@@ -19,8 +30,10 @@ const Nav = () => {
                         <NavLink 
                             activeClassName="main-nav__link--active" 
                             className="main-nav__link" 
-                            to="/about">
-                            About
+                            to="/motion"
+                            onClick={fillGhosts}
+                        >
+                            Motion
                         </NavLink>
                     </li>
                     <li className='main-nav__item'>
@@ -28,6 +41,7 @@ const Nav = () => {
                             activeClassName="main-nav__link--active" 
                             className="main-nav__link" 
                             to="/contact"
+                            onClick={fillGhosts}
                         >
                             Contact
                         </NavLink>

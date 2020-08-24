@@ -7,10 +7,10 @@ const Home = () => {
         <div className="home" >
             <main className='home-container'>
                 <div className='home-container__content'>
-                    <h1 id="home-header">Celia Dowzer</h1>
+                    <h1 id="home-header">FOOD ON FILM</h1>
                     <h3 className="home-subheader">Creative Styling</h3>
                     
-                    <Link className="home-button" to="/portfolio">Portfolio</Link>
+                    <Link className="home-button" to="/about">Enter</Link>
                 </div>
             </main>
             

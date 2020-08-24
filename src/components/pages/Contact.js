@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { Icon } from 'react-icons-kit' 
 import { envelopeO } from 'react-icons-kit/fa/envelopeO'
 import { tumblr } from 'react-icons-kit/fa/tumblr'
 import { instagram } from 'react-icons-kit/fa/instagram'
 import '../../styling/Contact.css'
 
-const Contact = () => {
-    const [ firstName, setFirstName ] = useState('')
-    const [ lastName, setLastName ] = useState('')
-    const [ emailAddress, setEmailAddress ] = useState('')
-    const [ subject, setSubject ] = useState('')
-    const [ message, setMessage ] = useState('')
+
+const Contact = ({ ghostContact, clearContact }) => {
+    useEffect(clearContact, [ghostContact]);
     
     return (
         <div className="contact-container">
@@ -22,74 +19,6 @@ const Contact = () => {
                     <br/>
                     Looking forward to hearing from you!
                 </p>
-                <form className="email-form">
-                    <label className="email-field">
-                        <span className="email-field__label">
-                            Name *
-                        </span>
-                        <div className="email-field__name-container">
-                            <div className="email-field__name">
-                                <input 
-                                    className="email-field__input"
-                                    type="text" 
-                                    value={firstName.value} 
-                                    onChange={setFirstName} 
-                                />
-                                <span className="email-field__subtitle">
-                                    First Name
-                                </span>
-                            </div>
-                            <div className="email-field__name">
-                                <input
-                                    className="email-field__input"  
-                                    type="text"
-                                    value={lastName.value}
-                                    onChange={setLastName}
-                                />
-                                <span className="email-field__subtitle">
-                                    Last Name
-                                </span>
-                            </div>
-                        </div>
-                    </label> 
-                    <label className="email-field">
-                        <span className="email-field__label">
-                            Email Address *
-                        </span>
-                        <input
-                            className="email-field__input"
-                            type="text"
-                            value={emailAddress.value}
-                            onChange={setEmailAddress}
-                        />
-                    </label>
-                    <label className="email-field">
-                    <span className="email-field__label">
-                        Subject *
-                    </span>
-                        <input 
-                            className="email-field__input"  
-                            type="text"
-                            value={subject.value}
-                            onChange={setSubject}
-                        />
-                    </label>
-                    <label className="email-field">
-                        <span className="email-field__label">
-                            Message *
-                        </span>
-                        <textarea
-                            className="email-field__input"
-                            value={message.value}
-                            onChange={setMessage}
-                        />
-                    </label>
-                    <input 
-                        className="email-field__submit" 
-                        type="submit" 
-                        value="Submit" 
-                    />      
-                </form>
             </div>
             <div className="contact-container__social">
                 <h3 className="contact-header">Connect</h3>
@@ -111,7 +40,7 @@ const Contact = () => {
                     </li>
                 </ul>
             </div>
-            <div className="ghostDiv"></div>
+            <div className="ghost-div--contact" style={{ background: `${ ghostContact === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
         </div>
     )
 }
