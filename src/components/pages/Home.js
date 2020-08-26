@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
+import { CSSTransition } from 'react-transition-group'
 import '../../styling/Home.css'
 
 const Home = () => {
@@ -7,10 +8,9 @@ const Home = () => {
         <div className="home" >
             <main className='home-container'>
                 <div className='home-container__content'>
-                    <h1 id="home-header">FOOD ON FILM</h1>
-                    <h3 className="home-subheader">Creative Styling</h3>
+                    {/* <h1 id="home-header">FOOD ON FILM</h1> */}
                     
-                    <Link className="home-button" to="/about">Enter</Link>
+                    <Link id="home-header"to="/portfolio">FOOD ON FILM</Link>
                 </div>
             </main>
             
@@ -21,6 +21,7 @@ const Home = () => {
                 <li></li>
                 <li></li>
             </ul>
+            {/* <CSSTransition></CSSTransition> */}
         </div>
     )
 }

@@ -16,24 +16,35 @@
 
 .home-container__content {
     position: absolute;
-    width: 70%;
-    height: 28%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12%;
     top: 59%;
     right: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #home-header {
-    font-size: 4.3rem;
-    font-weight: 100;
-    margin-bottom: 0.35rem;
+  display: inline-block;
+  font-size: 4.3rem;
+  font-weight: 100;
+  margin-bottom: 0.35rem;
+  color: black;
+  text-decoration: none;
+  transition: color 0.7s ease-out;
+}
+
+#home-header:hover {
+  color: rgb(116, 116, 116);
 }
 
 .home-subheader {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.4rem;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 }
 
 .home-button {
@@ -93,24 +104,48 @@
 }
 
 .slideshow li:nth-child(1) { 
-    background-image: url(https://previews.dropbox.com/p/thumb/AA5j_qngl6iC7k85QJW9wqFVX-BJju0iJhPyz7FAEDSj7rZeL5XQnml--MMEkTm9Tjg7y3OTotBj6_hNzB9XEB-CJP5b_Ff8MUYPcE9dQvhyQvQZxqFU5H5qg-BeTt8TIbk75PRLCXysxSU1FqTvCR_ZZfjeFzsChliWXjqERZB_zE83VrQoW4anwYSlGSfu8OMEPOGyd1AoPLQOKTt-adYWNP__osPGv2VG6sji_q6l_cK85xdtpIJT5YGi9hIOEAbb5g4q81n6jFUDVntUi4LqvefbdIQf70Ru5G8J4vP3N7AOMPIF-93x0exIwCLX0OqTJ6JgxSTLaW-IEwPfd4_pODQvL8EZc8r2ZNCzldqgzozvGjNWYMvogsujB6FUrtB7jcEKwVI9KjDGTKvOD258KIVMK3G7qezWzmT7aQH1Iw/p.jpeg?fv_content=true&size_mode=5) 
+  background-image: url(https://www.dropbox.com/s/ljppl5jy0vlg4rm/BlenderPancakes_800.jpg?raw=1) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://www.dropbox.com/s/z8d8d0oddyjyysj/Mussels800.jpg?raw=1);
+  animation-delay: 8s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://www.dropbox.com/s/3uqugzgx6h6e4wf/Octopus800.jpg?raw=1);
+  animation-delay: 16s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.dropbox.com/s/sscymlzft7k521r/Pavalova800.jpg?raw=1);
+  animation-delay: 24s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://www.dropbox.com/s/24saqasdh7hkfzt/Pizzas800.jpg?raw=1);
+  animation-delay: 32s; 
+}
+
+@media screen and (min-width: 800px) {
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://www.dropbox.com/s/jn94q1cpnj4v2ci/BlenderPancakes_AW18_Recipee_COMP.jpg?raw=1) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(https://previews.dropbox.com/p/thumb/AA7ypIGI0STsBPaiv8mb5grqaBBUH8UEVcOoFjJSZG4BKuCRkrMQjhbU_d3QONKOQjVgNdySYN-gU8lbuqRcSgCdMp3BEh47eMwK9fNBAKV8BX6kXaZJhzZPbpJAQoxjsL9IOeHk8iJ3dQZhosb5_nnBDk6jZ4MFefgmis8IV3y-utgYyuCZnSBLTQzBNKp-ngtrYmiAqS2FQyi8QD-E-l4g7TKYwdzh0-F_anAFpayncJwLKTHslBQqiqbvGUf9w2GfEYKtQEZ9VtfWsrJdgRE4L-XV7KkvqrW7-h0vSBI-I1cpueLZPHM9zaxYSyBjOkSz1zs-8dsMDx-91YX5tVM6S1u_qD2WJHRTeeCdm0iTcKEzZ0tQ2eZOl4ynPoiOEyaG9aRVrFhvPrfVt7e4ToopAe3MdnBL8r-J605rloD6GA/p.jpeg?size=1600x1200&size_mode=3);
+    background-image: url(https://www.dropbox.com/s/d9k8wc6fm2buzln/rose-syrup-pistachio-close-up%2520copy.jpg?raw=1);
     animation-delay: 8s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(https://previews.dropbox.com/p/thumb/AA48yClE3028MO_09tXh-Oj0NprmvGbcELXWTDZa51MqHjdVTLAYcA7Fi4AZ-QU758w-ih0gKWnXR14yBzzjyr3ehZ24GOXsyykXLr4MW4BJjT_yviVQ5dqJZR9QW0pG9_5aOaF3D_BTQ0oiZqG6SSYHHeK3L--6lC3ncNV_-7v9zhhqY2FlyqXNYfpLdNMZlpsQzte2vxoc0I3oGx33yInUZq-02tJFjJXqx_J73WUVWojedJj2SZ62_P0Sdu0GRzXgR7hWokkPZfapdUG3F-Y3cUnckgP2oi-xsC83U24OcKacwNOFIFFM-M5dSY2x8Dg4eY__N2zLeHLRUvq4RZCrcGj8BJuXsaY812i0i2hq5Q/p.jpeg?size=1600x1200&size_mode=3);
+    background-image: url(https://www.dropbox.com/s/t1u0z5fohy7uuiz/Octopus-1%20copy.jpg?raw=1);
     animation-delay: 16s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(https://previews.dropbox.com/p/thumb/AA7a3fauLVBUzSmmDlHGPibdPFQCdR8GC_NpQZtMoIJ59T64qvfA1yMmTm8CZ4K-Uim8EnkIbzu2UNWDRs5tdpuVI0a-EJzakKZ3BO_h3J4CPVQLcXY9M49MXBktd_s7zHpqXqKPRXs4XpXVupSJtqgsiCQDwKBhxreEORcsIqs2OnPEZiMP5sWKWMQa3wyQolpT867M6VXdqQeS7JuZSKHD7hdT6fDp38NMPjRcJfv06CAzQ5sd3ogVyhO6e4vrhXJWhhaQfASPb4J_x9zXRcnYgZxzguBEEsBgx_Fdas05uYOo1xt-fU3ePEFeirM_sKHwSwOJixakhRqDh2qgZNnBWiqkvQF_bSzehBCngwSEXg/p.jpeg?size=1600x1200&size_mode=3);
+    background-image: url(https://www.dropbox.com/s/2986dcn5x8dh33w/OB-finest-platter.jpg?raw=1);
     animation-delay: 24s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(https://previews.dropbox.com/p/thumb/AA6I9ps7r754lQH-vrWSkoWw42d3dqBB01wbEuijDULMJSmcjy9bamcQpnFyEX-kK6bCYHjawkrYykKjf1guY7uk164i1P3ytAU-MRfXtZOsHkkPxHZFKzrlGYcZ7a5uNDdUPB62SKSqEmnCHef6raTBubu--6VSXNUrtu21u5A096P-72xHEY7glTLZgFaIhQsXtoIVds1s87QuXurC8EHU4mDpv48BgVuZBM8yRr9HJHPMSLAtntTYuO2vApdyHJhMvf0Yfdhat5OUHG3QH6unSCG22nzFaw49mBvqVJH5fek-32t-rGOGK5ojnB42Bg6YoJVEzuo9N13AJth8aRyV6kIAE4W3cxWHfd1ZzWpkEbFlcAvtTdHPclFhujReiO5UYZeBtGGoRch5s5N5KjtWxK29QcsBBzaCP7_fPHSaeQ/p.jpeg?size=1600x1200&size_mode=3);
+    background-image: url(https://www.dropbox.com/s/jux6yun0as2vbub/Smoked-Trout-slices-open-sandwich-1%20copy%202.jpg?raw=1);
     animation-delay: 32s; 
   }
+
+}
 
 @keyframes imageAnimation { 
     0% { 

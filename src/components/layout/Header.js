@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <>
+            <hr className="line line--full"/>
+            <hr className="line line--half"/>
             <Link className="main-link" to="/">
                 <h2 className='main-header'>Food on Film</h2>
             </Link>
-            <h3 className='main-subheader'>Creative Stylists</h3>
 
         </>
     )

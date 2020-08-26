@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { XMasonry, XBlock } from 'react-xmasonry'
 import ImageContainer from './ImageContainer'
 import { trackWindowScroll } from 'react-lazy-load-image-component'
-// import ImageContext from '../../context/ImageContext'
 import ImageContextThumb from '../../context/ImageContextThumb'
 
 const Portfolio = () => {
