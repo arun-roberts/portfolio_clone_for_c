@@ -7,7 +7,7 @@ import { instagram } from 'react-icons-kit/fa/instagram'
 const Footer = () => {
     return (
         <>
-            <ul className="social-links__list">
+            <ul className="social-links">
                 <li className="social-links__item">
                     <a className="social-links__link" href="https://www.facebook.com/">
                         <Icon className="social-links__icon" icon={envelopeO} size={12} />

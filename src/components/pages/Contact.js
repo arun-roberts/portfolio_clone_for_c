@@ -40,7 +40,7 @@ const Contact = ({ ghostContact, clearContact }) => {
                     </li>
                 </ul>
             </div>
-            <div className="ghost-div--contact" style={{ background: `${ ghostContact === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
+            <div className="ghost-div ghost-div--contact" style={{ background: `${ ghostContact === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
         </div>
     )
 }

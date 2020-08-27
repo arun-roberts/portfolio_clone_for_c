@@ -10,9 +10,11 @@ const Main = () => {
     const [ ghostContact, clearGhostContact ] = useState(true) 
     const [ ghostAbout, clearGhostAbout ] = useState(true)
     const [ ghostMotion, clearGhostMotion ] = useState(true)
+    const [ ghostKitchen, clearGhostKitchen ] = useState(true)
     const clearContact = () => clearGhostContact(false)
     const clearAbout = () => clearGhostAbout(false)
     const clearMotion = () => clearGhostMotion(false)
+    const clearKitchen = () => clearGhostKitchen(false)
     const fillGhosts = () => {
         clearGhostContact(true)
         clearGhostAbout(true)
@@ -20,10 +22,10 @@ const Main = () => {
     }
 
     return (
-        <>
         <div className='site'>
             <Header />
             <Nav fillGhosts={fillGhosts} />
+            <div className="site-container">
                 <Switch>
                     <Route path="/portfolio" children={<Portfolio />} />
                     <Route 
@@ -38,11 +40,14 @@ const Main = () => {
                         path="/motion" 
                         children={<Motion ghostMotion={ghostMotion} clearMotion={clearMotion} />} 
                     />
-                    <Route path="/inthekitchen" children={<InTheKitchen />} />
+                    <Route 
+                        path="/inthekitchen" 
+                        children={<InTheKitchen ghostKitchen={ghostKitchen} clearKitchen={clearKitchen} />} 
+                    />
                 </Switch>
+            </div>    
             <Footer />
         </div>
-        </>
     );
 }
 

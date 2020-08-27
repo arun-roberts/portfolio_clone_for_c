@@ -1,34 +1,40 @@
 import React, { useEffect } from 'react'
-import portrait from '../images/celia.jpg'
 
 const About = ({ ghostAbout, clearAbout }) => {
     useEffect(clearAbout, []);
 
     return (
-        <div className="about-section absolute">
-            <figure className="about-section__figure">
-                <img className="about-section__image" src={portrait} alt="Celia Dowzer" />
-            </figure>
-            <p className="about-section__text">
-                Celia is a a food stylist based in Melbourne, Australia. Originally from a background as an international scientist, Celia has worked as a freelance food stylist for advertising and packaging, stills and motion for the past twenty years. 
-                <br/>
-                <br/>
-                As well as creating images which showcase the joy and beauty of real food, Celia is focused on bringing clients ideas to life by combining science, creativity and a passion for detail.
-                <br/>
-                <br/>
-                FOOD ON FILM collaborates with other freelance creatives - art directors, producers, photographers, videographers, stylists and assistants to offer food styling services, including access to a props pantry, studio and prop sourcing and customised recipe development and recipe testing.
-                <br/>
-                <br/>
-                FOOD ON FILM are passionate about working as socially and environmentally sustainably as possible in what has traditionally been an industry producing a lot of food waste. We recycle, use worm farms, compost, donate to food banks and use local produce when possible to minimise your footprint.
-                <br/>
-                <br/>
-                Reach out to FOOD ON FILM to assist your team with your next project OR let us create a crew for you. We’d love to hear from you!
-                <br/>
-                <br/>
-                Bringing your ideas to life!!
-            </p>
-            <div className="ghost-div--about" style={{ background: `${ ghostAbout === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
-        </div>
+        <>
+            <div className="about">
+                <div className="about__content">
+                    <h4 className="about__heading">Celia Dowzer - Food Stylist with <span className="about__text--black">FOOD ON FILM</span></h4>
+                    <p className="about__text">
+                        Celia is a professional food and prop stylist based in Melbourne, Australia. Originally from a background as a scientist, Celia is a freelance food stylist and has 20 years of experience working across advertising and packaging, stills and motion.
+                        <br/>
+                        <br/>
+                        As well as creating images which showcase the joy and beauty of food, Celia brings her skills to every project with a focus on interpreting client ideas and delivering on brand.
+                    </p>
+                </div>
+                <div className="about__content">
+                    <p className="about__text">
+                        <span className="about__text--black">FOOD ON FILM</span> can bring together other freelance creatives as required - art directors, producers, photographers, videographers, stylists and assistants to offer teams for food styling services to clients requiring food imagery for stills and video. We have access to a props pantry or can source props and provide recipe development and testing to make brands shine.
+                        <br/>
+                        <br/>
+                        <span className="about__text--black">FOOD ON FILM</span> are passionate about working as sustainably as possible. We recycle, use worm farms, compost, donate to food banks and use local produce where possible to minimise our footprint. 
+                        <br/>
+                        <br/>
+                        Reach out to <span className="about__text--black">FOOD ON FILM</span> to assist with your next project, large or small.
+                        <br/>
+                        <br/>
+                        We’d love to hear from you!
+                        <br/>
+                        <br/>
+                        Bringing your ideas to life!!
+                    </p>
+                </div>
+            </div>
+            <div className="ghost-div ghost-div--about" style={{ background: `${ ghostAbout === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
+        </>
     )
 }
 

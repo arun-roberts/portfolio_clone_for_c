@@ -1,0 +1,316 @@
+*, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+    font-weight: 300;
+    transition: color 0.08s ease;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.site {
+    
+    min-height: 100vh;
+    padding: 4.7rem 4.7rem;
+}
+
+.main-header, .main-subheader, .main-nav__list {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* ========================================================
+                        HEADER
+======================================================== */
+
+.main-nav {
+    margin-bottom: 3rem;
+}
+
+.line {
+    height: 0.3rem;
+    color: black;
+    background-color: black;
+    outline: none;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.line--half {
+    width: 32.6%;
+}
+
+.main-header {
+    font-size: 3.5rem;
+    letter-spacing: 0.7rem;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.main-link {
+    display: flex;
+    width: 100%;
+}
+
+.main-nav__list {
+    margin: 1.5rem 0 2.2rem;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 0.8rem;
+}
+
+.main-nav__link {
+    color: gray;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+
+.main-nav__link::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: currentColor;
+    transform: scaleX(0);
+}
+
+.main-nav__link:hover::after {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.main-nav__link, .main-link {
+    text-decoration: none;
+}
+
+.main-nav__link--active {
+    color: rgb(161, 161, 161);
+    
+}
+
+.main-nav__link:hover, .main-header:hover {
+    color: rgb(161, 161, 161);
+}
+
+/* ========================================================
+                        GALLERY
+======================================================== */
+
+.grid {
+    position: relative;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+    width: 97%;
+    height: 97%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.6rem;
+    z-index: 1;
+}
+
+.fadeAway {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: background 1s ease-in;
+}
+
+.ghost-div--contact {
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    transition: background 1s ease-in;
+}
+
+.ghost-div--about {
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    z-index: 2;
+    transition: background 1s ease-in;
+}
+
+.ghost-div--motion {
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 3;
+    transition: background 1s ease-in;
+}
+
+/* ========================================================
+                        ABOUT
+======================================================== */
+
+.about-section {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 4rem;
+}
+
+.about-section__content {
+    flex: 0 1 auto;
+    display: inline-block;
+    color: grey;
+    padding: 0;
+    width: 47%;
+}
+
+.about-section__text {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: none;
+    text-align: left;
+}
+
+.about-section__text--black {
+    color: black;
+}
+
+.motion {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.motion-video {
+    width: 100%;
+    z-index: 2;
+}
+
+.recipe {
+    width: 66%;
+    margin: 0 auto;
+}
+
+.recipe-headings {
+    text-align: center;
+}
+
+.recipe-time {
+    margin-bottom: 1rem;
+}
+
+
+
+.recipe-item__ingredient {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.recipe-image {
+    width: 30%;
+}
+
+/* ========================================================
+                        FOOTER
+======================================================== */
+
+
+    .social-links__list {
+        list-style-type: none;
+        text-align: center;
+        margin: 1.1rem 0 0;
+        padding: 0;
+    }       
+
+        .social-links__item {
+            display: inline-block;
+            width: 1.4rem;
+            height: 1.4rem;
+            margin: 0 0.16rem;
+            padding: 0;
+        }
+
+            .social-links__link {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+                .social-links__link::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: gray;
+                    border-radius: 50%;
+                }
+
+                    .social-links__link::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(255, 255, 255, 0);
+                        border-radius: 50%;
+                        z-index: 2;
+                    }
+
+                    .social-links__icon {
+                        align-self: center;
+                        color: rgb(248, 250, 239);
+                        font-size: 0.5rem;
+                        margin: 0;
+                        padding: 0;
+                        z-index: 3;
+                    }
+
+                    .social-links__list:hover .social-links__link::after {
+                        transition: background-color 0.4s ease-out;
+                        background-color: rgba(255, 255, 255, 0.445);
+                    }
+
+                    .social-links__link:hover::before {
+                        background-color: rgb(27, 27, 27);
+                        transition: background-color 0.4s ease-out;
+                    } 
+
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.acknowledgement {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    margin-top: 2rem; 
+}

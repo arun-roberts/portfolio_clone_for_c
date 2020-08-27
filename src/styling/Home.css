@@ -17,10 +17,11 @@
 .home-container__content {
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 12%;
+    height: 22%;
     top: 59%;
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
@@ -28,6 +29,7 @@
 
 #home-header {
   display: inline-block;
+  position: relative;
   font-size: 4.3rem;
   font-weight: 100;
   margin-bottom: 0.35rem;
@@ -36,15 +38,24 @@
   transition: color 0.7s ease-out;
 }
 
+#home-header::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  z-index: 4;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
 #home-header:hover {
   color: rgb(116, 116, 116);
 }
 
-.home-subheader {
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.4rem;
-    /* margin-bottom: 3rem; */
+#home-header:hover::after {
+  transform: scaleX(1);
 }
 
 .home-button {
@@ -137,7 +148,7 @@
     animation-delay: 16s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(https://www.dropbox.com/s/2986dcn5x8dh33w/OB-finest-platter.jpg?raw=1);
+    background-image: url(https://www.dropbox.com/s/arg5zd967p7f6y8/OB-finest-platter%20%281%29.jpg?raw=1);
     animation-delay: 24s; 
   }
   .slideshow li:nth-child(5) { 
